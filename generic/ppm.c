@@ -95,6 +95,7 @@ static int libppm_(Main_load)(lua_State *L)
 
   // return loaded image
   luaT_pushudata(L, tensor, torch_Tensor);
+  luaT_pushudata(L, D, int);
   return 1;
 }
 
