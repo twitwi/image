@@ -2,7 +2,7 @@ package = "image"
 version = "1.1.alpha-0"
 
 source = {
-   url = "git://github.com/torch/image",
+   url = "git://github.com/twitwi/image",
    tag = "master"
 }
 
