@@ -84,7 +84,7 @@ static int libppm_(Main_load)(lua_State *L)
        } else if (bpc == 2) {
           val = r[j+1] | (r[j] << 8); // Most significant bits first (cf http://en.wikipedia.org/wiki/Netpbm_format#16-bit_extensions )
           j += 2;
-          data[k*H*W+i] = (real)val;
+          data[k*H*W+i] = (real)val / D * 255;
        }
     }
   }
@@ -95,7 +95,6 @@ static int libppm_(Main_load)(lua_State *L)
 
   // return loaded image
   luaT_pushudata(L, tensor, torch_Tensor);
-  luaT_pushudata(L, D, int);
   return 1;
 }
 
