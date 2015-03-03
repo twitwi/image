@@ -1,5 +1,5 @@
 package = "image"
-version = "1.1.alpha-0"
+version = "1.1.alpha-1"
 
 source = {
    url = "git://github.com/twitwi/image",
@@ -12,7 +12,7 @@ description = {
 This package provides routines to load/save and manipulate images
 using Torch's Tensor data structure.
    ]],
-   homepage = "https://github.com/torch/image",
+   homepage = "https://github.com/twitwi/image",
    license = "BSD"
 }
 
