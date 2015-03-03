@@ -186,7 +186,8 @@ end
 
 local function loadPPM(filename, depth, tensortype)
    require 'libppm'
-   local a, MAXVAL = template(tensortype).libppm.load(filename)
+   local MAXVAL = 255
+   local a = template(tensortype).libppm.load(filename)
    if tensortype ~= 'byte' then
       a:mul(1/MAXVAL)
    end
